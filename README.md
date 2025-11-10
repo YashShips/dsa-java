@@ -9,7 +9,7 @@ Tracking my DSA progress in Java — Recursion, Backtracking, DP, and beyond.
 🚀 Goal: Become a software engineer who builds impactful, scalable products  
 
 ## 📌 What I'm Working On
-- 🧩 DSA in Java → [dsa-java](https://github.com/yashydv/dsa-java)
+- 🧩 DSA in Java → [dsa-java]([https://github.com/yashydv/dsa-java](https://github.com/YashShips/dsa-java))
 - 💻 Full Stack Projects → Coming soon
 
 ## 📈 GitHub Stats
