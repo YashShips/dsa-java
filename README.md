@@ -13,4 +13,4 @@ Tracking my DSA progress in Java — Recursion, Backtracking, DP, and beyond.
 - 💻 Full Stack Projects → Coming soon
 
 ## 📈 GitHub Stats
-![Yash's GitHub stats](https://github-readme-stats.vercel.app/api?username=yashydv&show_icons=true&theme=tokyonight)
+![Yash's GitHub stats](https://github-readme-stats.vercel.app/api?username=YashShips&show_icons=true&theme=tokyonight)
