@@ -14,6 +14,22 @@ This specific pattern (start, end, base case = start >= end) is a recursion arch
 In interviews, the moment you see “check from both ends” or “mirror something”, this pattern should instantly click.
  */
 
+/**
+ * 🧠 Interview Takeaways
+
+This is the “two-pointer recursion” archetype.
+
+The pattern if(start >= end) return; will appear again in:
+
+Palindrome check
+
+Reverse linked list
+
+Mirror binary tree
+
+You can now handle any “reverse / symmetric” recursion problem fluently.
+ */
+
 class Solution {
  public void helper(char[] s, int start, int end){
         if(start >= end){
