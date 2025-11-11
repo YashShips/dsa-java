@@ -7,6 +7,13 @@
  * Date: 11
  */
 
+/**
+ * 🧠 Placement Insight
+
+This specific pattern (start, end, base case = start >= end) is a recursion archetype.
+In interviews, the moment you see “check from both ends” or “mirror something”, this pattern should instantly click.
+ */
+
 class Solution {
  public void helper(char[] s, int start, int end){
         if(start >= end){
