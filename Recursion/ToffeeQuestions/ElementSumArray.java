@@ -1,3 +1,13 @@
+/** 
+ * 🎯 Problem Statement
+
+Given an array of integers, find the sum of all elements using recursion.
+
+Example:
+Input → arr = [3, 2, 5, 1, 6]
+Output → 17
+ * 
+ */
 /**
  * Author: Yash Yadav
  * Date: 11
