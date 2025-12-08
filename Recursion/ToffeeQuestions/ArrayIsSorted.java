@@ -19,7 +19,7 @@ class Main {
         }
         if( arr[index] > arr[index + 1] ){
             return false;
-        }
+        } 
         return isSorted(arr, index + 1);
     }
     public static void main(String[] args) {
