@@ -96,3 +96,13 @@ class Main {
         seq(s, "", 0);
     }
 }
+
+
+// ⭐ THE GOLDEN RULE (memorize this forever)
+
+// Whenever recursion processes a string/array element by element, you ALWAYS do index + 1 to move forward.
+
+// You do NOT do:
+// 	•	index again → infinite loop
+// 	•	index - 1 → backward (wrong direction)
+// 	•	index + 2 → skip characters
