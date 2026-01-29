@@ -3,8 +3,8 @@ class Solution {
         Arrays.sort(nums);
         int a = 0;
         int b = a + 1;
-        for(int i = 0; i < nums.length - 1; i++){
-            if(nums[a]!=nums[b]){
+        while( b < nums.length ){
+            if( nums[a] != nums[b] ){
                 a++;
                 b++;
             }
