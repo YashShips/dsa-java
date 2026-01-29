@@ -9,6 +9,6 @@ class Solution {
             sMap.put(sc, sMap.getOrDefault(sc, 0) + 1);
             tMap.put(tc, tMap.getOrDefault(tc, 0) + 1);
         }
-        return sMap.equals(tMap);
+         return sMap.equals(tMap);
     }
 }
