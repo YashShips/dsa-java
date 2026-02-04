@@ -19,7 +19,7 @@ class Solution {
         ListNode curr = head;
         ListNode prev = null;
         ListNode next;
-        while(curr!=null){
+        while(curr != null){
             head = curr.next;
             curr.next = prev;
             prev = curr;
@@ -29,7 +29,7 @@ class Solution {
     }
     public ListNode remove(ListNode head, int n){
         if(head == null) return null;
-        if(n == 1) return head.next;
+        else if(n == 1) return head.next;
         ListNode curr = head;
         for(int i = 1; i < n - 1; i++){
             curr = curr.next;
