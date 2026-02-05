@@ -13,8 +13,8 @@ class Solution {
         ListNode temp = head;
         int count = 1;
         while(temp != null){
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
         int size = (count/2) + 1;
         temp = head;
