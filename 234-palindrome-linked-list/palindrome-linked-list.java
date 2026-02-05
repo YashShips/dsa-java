@@ -16,8 +16,13 @@ class Solution {
             arr.add(curr.val);
             curr = curr.next;
         }
-        ArrayList<Integer> rev = new ArrayList<>(arr);
-        Collections.reverse(rev);
-        return arr.equals(rev);
+        int slow = 0;
+        int fast = arr.size() - 1;
+        while( slow < fast){
+            if(!arr.get(slow).equals(arr.get(fast))) return false;
+            slow++;
+            fast--;
+        }
+        return true;
     }
 }
