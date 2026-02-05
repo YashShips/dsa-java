@@ -16,9 +16,9 @@ class Solution {
             count++;
             temp = temp.next;
         }
-        int size = (count/2) + 1;
+        int size = ((count-1) /2) + 1;
         temp = head;
-        for(int i = size; i < count; i++){
+        for(int i = 1; i < size; i++){
             temp = temp.next;
         }
 
