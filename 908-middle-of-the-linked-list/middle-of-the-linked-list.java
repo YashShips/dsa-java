@@ -17,11 +17,11 @@ class Solution {
             count++;
         }
         int size = (count/2) + 1;
-        ListNode trav = head;
+        temp = head;
         for(int i = size; i < count; i++){
-            trav = trav.next;
+            temp = temp.next;
         }
 
-        return trav;
+        return temp;
     }
 }
