@@ -10,30 +10,31 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-            if(head == null || head.next == null) return head;
-            ListNode mid = findMid(head);
-            ListNode right = mid.next;
-            mid.next = null;
+        if(head == null || head.next == null) return head;
+           ListNode mid = findMid(head);
+           ListNode right = mid.next;
+           mid.next = null;
 
-            ListNode leftSorted = sortList(head);
-            ListNode rightSorted = sortList(right);
+           ListNode leftSorted = sortList(head);
+           ListNode rightSorted = sortList(right);
 
-            return mergeSort(leftSorted, rightSorted);
+           return mergeSort(leftSorted, rightSorted);
     }
     private ListNode findMid(ListNode head){
         ListNode slow = head;
         ListNode fast = head.next;
         while(fast != null && fast.next != null){
-            fast = fast.next.next;
             slow = slow.next;
+            fast = fast.next.next;
         }
         return slow;
     }
+
     private ListNode mergeSort(ListNode left, ListNode right){
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
-        while(left != null &&  right != null){
-            if(left.val <= right.val){
+        while(left != null && right != null){
+            if(left.val<=right.val){
                 curr.next = left;
                 left = left.next;
             }
@@ -41,8 +42,7 @@ class Solution {
                 curr.next = right;
                 right = right.next;
             }
-
-                curr = curr.next;
+            curr = curr.next;
         }
         curr.next = (left != null) ? left : right;
         return dummy.next;
