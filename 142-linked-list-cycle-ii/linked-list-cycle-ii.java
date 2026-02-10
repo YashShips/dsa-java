@@ -16,15 +16,14 @@ public class Solution {
         while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
-            if(fast == slow) break;
+            if(slow == fast) break;
         }
-        if(fast == null || fast.next == null) return null;
         slow = head;
+        if(fast == null || fast.next == null) return null;
         while(fast != slow){
             fast = fast.next;
             slow = slow.next;
         }
-
         return slow;
     }
 }
