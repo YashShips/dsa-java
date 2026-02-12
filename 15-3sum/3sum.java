@@ -10,21 +10,21 @@ class Solution {
                 i++;
             }
             else{
-                res.add(Arrays.asList(nums[f], nums[i], nums[j]));
+                res.add(Arrays.asList(nums[f],nums[i],nums[j]));
                 i++;
                 j--;
-                while(i<j && nums[i] == nums[i-1]) i++;
-                while(i<j && nums[j] == nums[j+1]) j--;
+                while(i<j && nums[i] == nums[i - 1]) i++;
+                while(i<j && nums[j] == nums[j + 1]) j--;
             }
         }
     }
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
-        for(int f = 0; f < nums.length; f++){
-            if(nums[f] > 0) break;
-            else if(f == 0 || nums[f] != nums[f - 1]){
-                helper(f, nums, res);
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] > 0) break;
+            else if(i == 0 || nums[i] != nums[i - 1]){
+                helper(i, nums, res);
             }
         }
         return res;
