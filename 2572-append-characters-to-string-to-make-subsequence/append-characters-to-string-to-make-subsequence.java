@@ -5,10 +5,10 @@ class Solution {
             char sc = s.charAt(i);
             char tc = t.charAt(j);
             if(sc == tc){
-                i++;
                 j++;
+                i++;
             }
-            else if(sc != tc){
+            else{
                 i++;
             }
         }
