@@ -3,8 +3,7 @@ class Solution {
        int i = 0,
            k = 0,
            j = nums.length - 1;
-
-        while(k <= j){
+        while( k <= j ) {
             if(nums[k] == 1) k++;
             else if(nums[k] == 0){
                 int temp = nums[k];
@@ -19,6 +18,6 @@ class Solution {
                 nums[j] = temp;
                 j--;
             }
-        } 
+        }
     }
 }
