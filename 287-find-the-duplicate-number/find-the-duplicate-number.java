@@ -1,18 +1,15 @@
 class Solution {
     public int findDuplicate(int[] nums) {
-        int slow = 0,
-            fast = 0;
+        int fast = 0,
+            slow = 0;
+        
         do{
             slow = nums[slow];
-            // fast = nums[fast];
-            // fast = nums[fast];  isko agar shortcut m likhna h toh hum likhenge
             fast = nums[nums[fast]];
         }
-        while(slow != fast);
-
+        while(fast != slow);
         int n1 = 0,
-            n2 = slow;
-
+            n2 = fast;
         while(n1 != n2){
             n1 = nums[n1];
             n2 = nums[n2];
