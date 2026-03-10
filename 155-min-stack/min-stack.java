@@ -1,15 +1,15 @@
-    class Node{
-        int val;
-        int min;
-        public Node(int v, int m){
-            this.val = v;
-            this.min = m;
-        }
+class Node{
+    int val;
+    int min;
+    public Node(int v, int m){
+        this.val = v;
+        this.min = m;
     }
+}
 class MinStack {
     Stack<Node> stack;
     public MinStack() {
-        stack = new Stack<Node>();
+        stack = new Stack<>();
     }
     
     public void push(int val) {
@@ -18,20 +18,16 @@ class MinStack {
             return;
         }
         int currMin = stack.peek().min;
-        int newMin = Math.min(currMin, val);
-        stack.push(new Node(val, newMin));
+        int getMin = Math.min(currMin, val);
+        stack.push(new Node(val, getMin));
     }
     
     public void pop() {
-        if(!stack.isEmpty()){
-            stack.pop();
-        }
+        if(!stack.isEmpty()) stack.pop();
     }
     
     public int top() {
-        if(stack.isEmpty()){
-            return -1;
-        }
+        if(stack.isEmpty()) return -1;
         return stack.peek().val;
     }
     
