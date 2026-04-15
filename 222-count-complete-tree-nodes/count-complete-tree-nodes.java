@@ -18,6 +18,6 @@ class Solution {
         if(root == null) return 0;
         int left = countNodes(root.left);
         int right = countNodes(root.right);
-        return 1 + right + left;
+        return 1 + left + right;
     }
 }
