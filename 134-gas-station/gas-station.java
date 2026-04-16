@@ -13,8 +13,8 @@ class Solution {
         for(int i = 0; i < n; i++){
             currGas += gas[i] - cost[i];
             if(currGas < 0){
-                startIdx = i+1;
                 currGas = 0;
+                startIdx = i + 1;
             }
         }
         return startIdx;
