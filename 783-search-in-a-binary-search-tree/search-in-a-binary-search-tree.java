@@ -19,8 +19,9 @@ class Solution {
         while(curr != null){
             if(curr.val == val) return curr;
             else if(curr.val > val) curr = curr.left;
-            else if(curr.val < val) curr = curr.right;       
+            else curr = curr.right;
         }
         return null;
     }
 }
+        
