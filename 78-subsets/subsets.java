@@ -1,17 +1,16 @@
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        subseq(nums, 0, new ArrayList<>(), result);
-        return result;
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+        cb(0, nums, res, new ArrayList<>());
+        return res;
     }
-    public void subseq(int[] nums, int index, List<Integer> current, List<List<Integer>> result){
-        if ( index == nums.length ){
-            result.add(new ArrayList<>(current));
-            return;
+    public void cb(int idx, int[] nums, List<List<Integer>> res, List<Integer> ds){
+        res.add(new ArrayList<>(ds));
+        for(int i = idx; i < nums.length; i++){
+            ds.add(nums[i]);
+            cb(i + 1, nums, res, ds);
+            ds.remove(ds.size() - 1);
         }
-        current.add(nums[index]);
-        subseq(nums, index + 1, current, result);
-        current.remove(current.size() - 1);
-        subseq(nums, index + 1, current, result);
     }
 }
