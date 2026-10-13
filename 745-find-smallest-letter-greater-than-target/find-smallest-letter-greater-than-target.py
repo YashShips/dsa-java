@@ -7,5 +7,7 @@ class Solution:
                last = mid
             else:
                 first = mid + 1
-        ##If index is ever out of bound, this is how we wrap it around
-        return letters[first % len(letters)]
+        if last == len(letters):
+            return letters[0]
+        else :
+            return letters[last]
